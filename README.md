@@ -1,22 +1,24 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/C5iNLRra)
 # Documentación del Proyecto
-## Unidad 2
+# Unidad 2
 
 ## Actividad 1
 
+## Ejercicio 1
+
 En el ciclo de vida de un juego, funciones como Setup(), Update(), y Render() son clave para controlar el flujo y comportamiento del juego en cada "frame" o iteración del ciclo.
 
-### Setup():
+#### Setup():
 
 Su propósito es inicializar todo lo que necesita el juego antes de que comience a ejecutarse el bucle principal. Aquí se configura el estado inicial, se cargan recursos como imágenes, sonidos, o datos necesarios, y se inicializan variables o componentes importantes.
 Solo se ejecuta una vez, justo al inicio del juego.
 
-### Update():
+#### Update():
 
 Esta función actualiza el estado lógico del juego en cada frame. Se encarga de mover personajes, procesar las entradas del usuario (como pulsaciones de teclas o toques en pantalla), y calcular la física o las colisiones.
 Update() es donde se toman las decisiones que afectan el estado del juego. Se ejecuta constantemente en cada iteración del bucle de juego, normalmente muchas veces por segundo.
 
-### Render():
+#### Render():
 
 Su objetivo es dibujar en la pantalla lo que el jugador debe ver. Es donde se representan los elementos gráficos actualizados, como personajes, objetos o fondos.
 Se ejecuta después de Update() para mostrar los cambios en el estado del juego. Se encarga de renderizar gráficos y todo lo que deba verse actualizado en pantalla.
@@ -26,6 +28,18 @@ Luego, el ciclo del juego alterna entre Update() y Render():
 En cada frame, primero se llama a Update(), que actualiza la lógica del juego.
 Después se llama a Render(), que se encarga de dibujar los cambios visuales en la pantalla.
 Este ciclo se repite hasta que el juego se detiene.
+
+## Medición del Tiempo en el Game Loop con SDL_GetTicks()
+Este ejemplo demuestra cómo medir el tiempo transcurrido entre las llamadas a Update() y Render() utilizando la función SDL_GetTicks() de SDL. Comprender el tiempo entre estas funciones es importante para evaluar la tasa de fotogramas y la frecuencia de actualización del juego.
+
+#### Explicación del Código
+El programa mide el tiempo entre las funciones Update() y Render(), lo que permite analizar cuánto tiempo toma cada una. Esto es crucial para asegurar una tasa de fotogramas fluida en los juegos y entender el rendimiento del ciclo principal. 
+
+
+
+### Printf En Funciones
+
+Setup() se ejecuta una vez y luego el ciclo de juego itera entre Update() y Render() continuamente.
 
 ## Actividad 2
 Rapid roll
